@@ -430,16 +430,16 @@ Other Style Guides
 
 ## Strings
 
-  - [6.1](#6.1) <a name='6.1'></a> Use single quotes `''` for strings.
+  - [6.1](#6.1) <a name='6.1'></a> Use double quotes `""` for strings.
 
     eslint rules: [`quotes`](http://eslint.org/docs/rules/quotes.html).
 
     ```javascript
     // bad
-    const name = "Capt. Janeway";
+    const name = 'Capt. Janeway';
 
     // good
-    const name = 'Capt. Janeway';
+    const name = "Capt. Janeway";
     ```
 
   - [6.2](#6.2) <a name='6.2'></a> Strings that cause the line to go over 100 characters should be written across multiple lines using string concatenation.
@@ -1450,14 +1450,14 @@ Other Style Guides
 
 ## Whitespace
 
-  - [18.1](#18.1) <a name='18.1'></a> Use soft tabs set to 2 spaces.
+  - [18.1](#18.1) <a name='18.1'></a> Use soft tabs set to 4 spaces.
 
     eslint rules: [`indent`](http://eslint.org/docs/rules/indent.html).
 
     ```javascript
     // bad
     function () {
-    ∙∙∙∙const name;
+    ∙∙const name;
     }
 
     // bad
@@ -1467,7 +1467,7 @@ Other Style Guides
 
     // good
     function () {
-    ∙∙const name;
+    ∙∙∙∙const name;
     }
     ```
 
