@@ -1,7 +1,7 @@
 module.exports = {
   'rules': {
     // enforce spacing inside array brackets
-    'array-bracket-spacing': 0,
+    'array-bracket-spacing': [2, 'never'],
     // enforce one true brace style
     'brace-style': [2, '1tbs', {'allowSingleLine': true }],
     // require camel case names
@@ -10,8 +10,8 @@ module.exports = {
     'comma-spacing': [2, {'before': false, 'after': true}],
     // enforce one true comma style
     'comma-style': [2, 'last'],
-    // require or disallow padding inside computed properties
-    'computed-property-spacing': 0,
+    // disallow padding inside computed properties
+    'computed-property-spacing': [2, 'never'],
     // enforces consistent naming when capturing the current execution context
     'consistent-this': 0,
     // enforce newline at the end of file, with no multiple empty lines
@@ -23,15 +23,23 @@ module.exports = {
     // this option enforces minimum and maximum identifier lengths (variable names, property names etc.)
     'id-length': 0,
     // this option sets a specific tab width for your code
-    'indent': [2, 2],
+    // https://github.com/eslint/eslint/blob/master/docs/rules/indent.md
+    'indent': [2, 2, { "SwitchCase": 1, "VariableDeclarator": 1 }],
     // specify whether double or single quotes should be used in JSX attributes
-    'jsx-quotes': 2,
+    // http://eslint.org/docs/rules/jsx-quotes
+    'jsx-quotes': [2, 'prefer-double'],
     // enforces spacing between keys and values in object literal properties
     'key-spacing': [2, {'beforeColon': false, 'afterColon': true}],
     // enforces empty lines around comments
     'lines-around-comment': 0,
     // disallow mixed 'LF' and 'CRLF' as linebreaks
     'linebreak-style': 0,
+    // specify the maximum length of a line in your program
+    // https://github.com/eslint/eslint/blob/master/docs/rules/max-len.md
+    'max-len': [2, 100, 2, {
+      'ignoreUrls': false,
+      'ignoreComments': false
+    }],
     // specify the maximum depth callbacks can be nested
     'max-nested-callbacks': 0,
     // require a capital letter for constructors
@@ -50,8 +58,8 @@ module.exports = {
     'no-lonely-if': 0,
     // disallow mixed spaces and tabs for indentation
     'no-mixed-spaces-and-tabs': 2,
-    // disallow multiple empty lines
-    'no-multiple-empty-lines': [2, {'max': 2}],
+    // disallow multiple empty lines and only one newline at the end
+    'no-multiple-empty-lines': [2, {'max': 2, 'maxEOF': 1}],
     // disallow nested ternary expressions
     'no-nested-ternary': 2,
     // disallow use of the Object constructor
@@ -66,8 +74,8 @@ module.exports = {
     'no-underscore-dangle': 0,
     // disallow the use of Boolean literals in conditional expressions
     'no-unneeded-ternary': 0,
-    // require or disallow padding inside curly braces
-    'object-curly-spacing': 0,
+    // require padding inside curly braces
+    'object-curly-spacing': [2, 'always'],
     // allow just one var statement per function
     'one-var': [2, 'never'],
     // require assignment operator shorthand where possible or prohibit it entirely
@@ -77,7 +85,8 @@ module.exports = {
     // enforce padding within blocks
     'padded-blocks': [2, 'never'],
     // require quotes around object literal property names
-    'quote-props': 0,
+    // http://eslint.org/docs/rules/quote-props.html
+    'quote-props': [2, 'as-needed', { 'keywords': true, 'unnecessary': true, 'numbers': false }],
     // specify whether double or single quotes should be used
     'quotes': [2, 'single', 'avoid-escape'],
     // require identifiers to match the provided regular expression
@@ -95,9 +104,10 @@ module.exports = {
     // require or disallow space before blocks
     'space-before-blocks': 2,
     // require or disallow space before function opening parenthesis
-    'space-before-function-paren': [2, 'never'],
+    // https://github.com/eslint/eslint/blob/master/docs/rules/space-before-function-paren.md
+    'space-before-function-paren': [2, { 'anonymous': 'always', 'named': 'never' }],
     // require or disallow spaces inside parentheses
-    'space-in-parens': 0,
+    'space-in-parens': [2, 'never'],
     // require spaces around operators
     'space-infix-ops': 2,
     // require a space after return, throw, and case
