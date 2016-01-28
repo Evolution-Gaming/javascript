@@ -1,3 +1,23 @@
+4.0.0 / 2016-01-22
+==================
+ - [breaking] require outer IIFE wrapping; flesh out guide section
+ - [minor] Add missing `arrow-body-style`, `prefer-template` rules (#678)
+ - [minor] Add `prefer-arrow-callback` to ES6 rules (to match the guide) (#677)
+ - [Tests] run `npm run lint` as part of tests; fix errors
+ - [Tests] use `parallelshell` to parallelize npm run-scripts
+
+3.1.0 / 2016-01-07
+==================
+ - [minor] Allow multiple stateless components in a single file
+
+3.0.2 / 2016-01-06
+==================
+ - [fix] Ignore URLs in `max-len` (#664)
+
+3.0.1 / 2016-01-06
+==================
+ - [fix] because we use babel, keywords should not be quoted
+
 3.0.0 / 2016-01-04
 ==================
  - [breaking] enable `quote-props` rule (#632)

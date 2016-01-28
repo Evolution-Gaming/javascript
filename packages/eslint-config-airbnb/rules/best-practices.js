@@ -1,6 +1,6 @@
 module.exports = {
   'rules': {
-    // Enforces getter/setter pairs in objects
+    // enforces getter/setter pairs in objects
     'accessor-pairs': 0,
     // treat var statements as if they were block scoped
     'block-scoped-var': 2,
@@ -13,7 +13,7 @@ module.exports = {
     // require default case in switch statements
     'default-case': 2,
     // encourages use of dot notation whenever possible
-    'dot-notation': [2, { 'allowKeywords': true}],
+    'dot-notation': [2, { 'allowKeywords': true }],
     // enforces consistent newlines before or after dots
     'dot-location': 0,
     // require the use of === and !==
@@ -108,7 +108,8 @@ module.exports = {
     // requires to declare all vars on top of their containing scope
     'vars-on-top': 2,
     // require immediate function invocation to be wrapped in parentheses
-    'wrap-iife': [2, 'any'],
+    // http://eslint.org/docs/rules/wrap-iife.html
+    'wrap-iife': [2, 'outside'],
     // require or disallow Yoda conditions
     'yoda': 2
   }
